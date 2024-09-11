@@ -13,25 +13,95 @@ body {
     margin-left: 30px;
 }
 
+/* Estilos globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 header {
+    background-color: white;
     padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
 }
+
+.logo img {
+    height: 40px; /* Ajustar a altura da logo */
+}
+
+.cabecalho {
+    display: flex;
+    gap: 30px;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.cabecalho a:hover {
+    color: #FF6C00;
+}
+
+.cabecalho .botao-container {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.botao-container{
+    border-radius: 5px;
+}
+
+.botao {
+    background: linear-gradient(90deg, #FF6C00 0%, #FFC200 100%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background: linear-gradient(90deg, #FFC200 0%, #FF6C00 100%);
+}
+
+
+.botao.entrar {
+    background: transparent;
+
+    color: #FF6C00; 
+    padding: 10px 20px;
+    border: 2px solid; /* Define a borda */
+    border-image: linear-gradient(90deg, #FF6C00 0%, #FFC200 100%);
+    border-image-slice: 4; 
+    border-radius: 90px; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
 
 .logo img {
     width: 150px;
 }
 
-.cabecalho {
-    display: flex;
-    gap: 20px;
-}
 
 .cabecalho a {
     color: #333;
@@ -51,10 +121,12 @@ header {
     background-color: #fff;
     margin-top: 20px;
     margin-left: 2%;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
 }
 
 .capa_texto {
     flex: 1;
+    margin-right: 20px; /* Adiciona espaçamento entre texto e imagem */
 }
 
 .capa_texto h2 {
@@ -110,6 +182,7 @@ span {
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .sobre-nos-imagem {
@@ -146,15 +219,24 @@ span {
 .cards {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
 }
 
 .card {
-    background: #fff;
+    background: #a3a3a358;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
     flex: 1;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave */
 }
+
+.card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
 
 .card h3 {
     font-size: 20px;
@@ -177,6 +259,7 @@ span {
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .servicos-texto {
@@ -250,18 +333,25 @@ span {
 .item-colaboradores {
     width: 18%;
     display: flex;
+    border: #000000 3px;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     padding: 16px;
     border-radius: 12px;
-    background: #c3c5c74d;
+    background-color: #6463634d;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .item-colaboradores:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 25px rgba(59, 59, 59, 0.3);
+    transform: translateY(-10px);
+}
+
+.img-colaboradores:hover {
+    border: 3px solid #FF6C00;
+    transition: border 0.3s ease, transform 0.3s ease;
 }
 
 .img-colaboradores {
@@ -300,8 +390,8 @@ span {
     flex-wrap: wrap;
     text-align: center; 
 }
-    
-.imagem_baixeoapp{
+
+.imagem_baixeoapp {
     max-width: 95%;
     height: auto;
     align-items: center;
@@ -319,76 +409,103 @@ footer {
     font-size: 14px;
 }
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .capa {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .capa_texto {
+        margin-right: 0;
+    }
+
+    .capa_texto h2 {
+        font-size: 28px;
+    }
+
+    .capa_texto p {
+        font-size: 16px;
+    }
+
+    .sobre-nos-container,
+    .servicos-container {
+        flex-direction: column;
+    }
+
+    .sobre-nos-imagem img,
+    .servicos-imagem img {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        
+    }
+
+    .colaboradores {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-colaboradores {
+        width: 80%;
+    }
 }
 
-.footer-logo img {
-    max-width: 150px;
-    margin-bottom: 20px;
-}
+@media (max-width: 768px) {
+    body {
+        margin-left: 0;
+    }
 
-.footer-links,
-.footer-social,
-.footer-contact {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 20px;
-}
+    .menu {
+        flex-direction: column;
+    }
 
-.footer-links h4,
-.footer-social h4,
-.footer-contact h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+    .capa {
+        padding: 10px;
+    }
 
-.footer-links nav a {
-    display: block;
-    color: #000000;
-    text-decoration: none;
-    margin-bottom: 8px;
-    transition: color 0.3s ease;
-}
+    .capa_texto h2 {
+        font-size: 24px;
+    }
 
-.footer-links nav a:hover {
-    color: #FFC200;
-}
+    .capa_texto p {
+        font-size: 14px;
+    }
 
-.footer-social .social-icons {
-    display: flex;
-    gap: 15px;
-}
+    .sobre-nos-container,
+    .servicos-container {
+        flex-direction: column;
+    }
 
-.footer-social .social-icons a {
-    color: #000000;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
+    .sobre-nos-imagem img,
+    .servicos-imagem img {
+        width: 100%;
+    }
 
-.footer-social .social-icons a:hover {
-    color: #FFC200;
-}
+    .card {
+        width: 100%;
+        display: flex;
+    }
 
-.footer-contact p {
-    margin-bottom: 8px;
-}
+    .colaboradores {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    margin-top: 20px;
-    font-size: 13px;
-    color: #000000;
-}
-
-.footer-bottom p {
-    margin: 0;
-}
+    .item-colaboradores {
+        width: 90%;
+    }

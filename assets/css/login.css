@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --my-gradient: linear-gradient(90deg, #FF6C00 0%, #FFC200 100%);
+  }
+  
+  .element {
+    background: var(--my-gradient);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+h1{
+     background: var(--my-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+main,
+footer {
+    padding: 0 10%;
+}
+
+.logo {
+    width: auto;
+    height: 42px;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo{
+    width: 45%;
+}
+
+.personagem,img{
+    width: 55%;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 16px;
+    background-color: transparent;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 12px 0;
+}
+
+
+input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+form>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0;
+}
+
+
+
+form>div>a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+}
+
+form>div>div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.manter-conectado-txt {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+}
+
+button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 16px 24px 16px 24px;
+    border-radius: 6px;
+    background: var(--my-gradient);
+    border: 1px solid var(--my-gradient);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background orange;
+
+}
+
+.cadastre-se {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.cadastre-se>a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: var(--my-gradient);
+}
+
+.img {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.login {
+    background-image: url(../img/tubarão-de-pontos.png);
+}
+
+.cadastro {
+    background-image: url(../img/agua-viva-de-pontos.png);
+}
+
+i {
+    font-size: 25px;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+
+}
+
+.perso{
+    padding: 60px;
+    margin: 60px;
+    text-align: center;
+    justify-content: center;
+
+
+}
