@@ -529,31 +529,53 @@ footer {
         width: 90%;
     }
     .menu-list {
-        display: none; /* Oculte o menu padrão */
-        flex-direction: column; /* Torna os itens do menu em coluna */
+        display: none; 
+        flex-direction: column; 
         position: absolute;
-        top: 60px; /* Ajuste conforme necessário */
+        top: 60px; 
         right: 0;
-        background-color: white; /* Cor de fundo do menu */
+        background-color: white; 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1;
-        width: 100%; /* Para ocupar toda a largura */
+        width: 100%; 
     }
 
     .menu-toggle {
-        display: block; /* Exibe o botão do menu em dispositivos móveis */
-        padding: 10px 8px; /* Diminuir o padding para mobile */
+        display: block; 
+        padding: 10px 8px;        
+         margin-bottom: 20px;
 
     }
 
     .menu-list.show {
-        display: flex; /* Exibe o menu quando ativado */
+        display: flex; 
         margin-left: 100px;
         padding-left: 20px;
     }
+    #close-menu {
+        background-color: #FF6C00;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 500;
+        transition: background-color 0.3s ease;
+    }
+    
+    #close-menu:hover {
+        background-color: #FFC200;
+    }
+    
 }
 
     .botao-container {
-        padding: 20px 2px; /* Diminuir o padding para mobile */
-        font-size: 12px; /* Diminuir o tamanho da fonte para mobile */
+        padding: 20px 2px; 
+        font-size: 12px; 
     }
