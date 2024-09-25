@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --my-gradient: linear-gradient(90deg, #FF6C00 0%, #FFC200 100%);
+  }
+  
+  .element {
+    background: var(--my-gradient);
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -60,10 +68,10 @@ header {
 }
 
 .botao-container{
-    border-radius: 5px;
+    border-radius: px;
 }
 
-.botao {
+.botao_cadastrar {
     background: linear-gradient(90deg, #FF6C00 0%, #FFC200 100%);
     color: white;
     padding: 10px 20px;
@@ -80,19 +88,30 @@ header {
 }
 
 
-.botao.entrar {
-    background: transparent;
-
-    color: #FF6C00; 
+.botao_entrar {
+    background: rgb(255, 255, 255);
+    color: orange;
     padding: 10px 20px;
-    border: 2px solid; /* Define a borda */
-    border-image: linear-gradient(90deg, #FF6C00 0%, #FFC200 100%);
-    border-image-slice: 4; 
-    border-radius: 90px; 
+    border: 2px solid orange;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-list li {
+    display: inline; /* Exibir os itens em linha por padrão */
+}
+
+.menu-toggle {
+    display: none; /* Oculta o botão do menu por padrão */
+    cursor: pointer;
 }
 
 
@@ -509,3 +528,34 @@ footer {
     .item-colaboradores {
         width: 90%;
     }
+    .menu-list {
+        display: none; /* Oculte o menu padrão */
+        flex-direction: column; /* Torna os itens do menu em coluna */
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        right: 0;
+        background-color: white; /* Cor de fundo do menu */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        width: 100%; /* Para ocupar toda a largura */
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão do menu em dispositivos móveis */
+        padding: 20px 8px; /* Diminuir o padding para mobile */
+
+    }
+
+    .menu-list.show {
+        display: flex; /* Exibe o menu quando ativado */
+        margin-left: 100px;
+        padding-left: 20px;
+    }
+}
+
+    .botao-container {
+        padding: 20px 8px; /* Diminuir o padding para mobile */
+        font-size: 12px; /* Diminuir o tamanho da fonte para mobile */
+    }
+
+    
