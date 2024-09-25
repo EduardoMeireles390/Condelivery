@@ -542,7 +542,7 @@ footer {
 
     .menu-toggle {
         display: block; /* Exibe o botão do menu em dispositivos móveis */
-        padding: 20px 8px; /* Diminuir o padding para mobile */
+        padding: 10px 8px; /* Diminuir o padding para mobile */
 
     }
 
@@ -554,8 +554,6 @@ footer {
 }
 
     .botao-container {
-        padding: 20px 8px; /* Diminuir o padding para mobile */
+        padding: 20px 2px; /* Diminuir o padding para mobile */
         font-size: 12px; /* Diminuir o tamanho da fonte para mobile */
     }
-
-    
